@@ -1,0 +1,22 @@
+{
+    "Bacon": {
+        "Covabra": 0.01,
+        "Savegnago": 0.05
+    },
+    "Hamburguer": {
+        "Covabra": 0.01,
+        "Savegnago": 0.05
+    },
+    "Queijo": {
+        "Covabra": 0.07,
+        "Savegnago": 0.06
+    },
+    "Ovo": {
+        "Covabra": 2.5,
+        "Savegnago": 2.42
+    },
+    "Pão": {
+        "Covabra": 2.42,
+        "Savegnago": 2.42
+    }
+}

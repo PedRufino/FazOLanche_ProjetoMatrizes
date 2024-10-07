@@ -1,0 +1,16 @@
+{
+    "X-Extra": {
+        "Bacon": 100,
+        "Hamburguer": 200,
+        "Queijo": 100,
+        "Ovo": 2,
+        "Pão": 1
+    },
+    "X-Bacon": {
+        "Bacon": 50,
+        "Hamburguer": 200,
+        "Queijo": 50,
+        "Ovo": 1,
+        "Pão": 1
+    }
+}
