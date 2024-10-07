@@ -1,16 +1,17 @@
 import json
 
-
 class Cardapio:
     def __init__(self) -> None:
         self.path = "./Informacoes/cardapio.json"
         self._dict_lanches = self._open_cardapio()
 
     def _open_cardapio(self):
+        # Abre o arquivo JSON e carrega os dados em um dicionário
         with open(self.path) as files:
             return json.loads(files.read())
-    
+
     def impressao_cardapio(self):
+        # Imprime o cardápio formatado com os ingredientes de cada lanche
         print(f"{'Lanche':<12} {'Bacon':<10} {'Hamburguer':<10} {'Queijo':<10} {'Ovo':<10} {'Pão':<10}")
         print("-" * 60)
         
@@ -20,6 +21,7 @@ class Cardapio:
                 f"{ingredientes.get('Pão', 0):<10}")
 
     def alterar_item_lanche(self, lanche, item, valor):
+        # Altera o valor de um item específico em um lanche e salva as alterações
         try:
             if lanche not in self._dict_lanches:
                 print(f"Lanche '{lanche}' não encontrado.")
@@ -36,5 +38,6 @@ class Cardapio:
             print(f"Ocorreu um erro ao alterar o item: {e}")
 
     def _salvar_alteracoes(self):
+        # Salva as alterações feitas no dicionário de lanches de volta no arquivo JSON
         with open(self.path, "w") as files:
             json.dump(self._dict_lanches, files, ensure_ascii=False, indent=4)
